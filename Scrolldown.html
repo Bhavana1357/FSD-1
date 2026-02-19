@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full Background Image</title>
+
+    <style>
+        body {
+    margin: 0;
+    min-height: 150vh; 
+    font-family:cursive;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skewX(15deg);
+
+    width: 500px;
+    height: 300px;
+
+    background-image: url("nature.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: -1;
+    opacity: 0.7;
+}
+    </style>
+</head>
+
+<body>
+
+<div class="content">
+    <h1>Full Background Image Demo</h1>
+
+    <p>Clouds drift across the sky like soft, ever-changing paintings, shaping the mood of the landscape below. They’re not just water vapor—they’re mood-setters, light-diffusers, and sometimes, storytellers. Nature, with its trees, rivers, mountains, and breeze, feels alive and balanced when clouds roll in, casting shadows and painting golden light during sunrise or sunset. Together, they create a dynamic, breathing world—calm, wild, and endlessly beautiful</p>
+
+    
+    <p>Keep scrolling… keep scrolling…</p>
+</div>
+
+</body>
+</html>
