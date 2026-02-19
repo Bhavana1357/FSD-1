@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sunset Color Reference Demo</title>
+
+<style>
+
+/* CSS Variable */
+:root {
+    --sunset-orange: #FF6F00;
+}
+
+/* 1. Color Name */
+.color-name {
+    background-color: orange;
+    color: white;
+}
+
+/* 2. HEX Color */
+.hex-color {
+    background-color: #FF8C00;
+    color: #4A1C00;
+}
+
+/* 3. RGB */
+.rgb-color {
+    background-color: rgb(255, 99, 71);
+    color: rgb(255, 255, 255);
+}
+
+/* 4. RGBA */
+.rgba-color {
+    background-color: rgba(255, 165, 0, 0.6);
+    color: black;
+}
+
+/* 5. HSL */
+.hsl-color {
+    background-color: hsl(30, 100%, 50%);
+    color: white;
+}
+
+/* 6. HSLA */
+.hsla-color {
+    background-color: hsla(20, 100%, 40%, 0.8);
+    color: white;
+}
+
+/* 7. CSS Variable */
+.variable-color {
+    background-color: var(--sunset-orange);
+    color: white;
+}
+
+.box {
+    padding: 18px;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+    background-color: #FFF3E0;
+    text-align: center;
+}
+
+h1 {
+    color: #BF360C;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1> Sunset Color Reference in CSS </h1>
+
+<div class="box color-name">Color Name (orange)</div>
+
+<div class="box hex-color">HEX Value (#FF8C00)</div>
+
+<div class="box rgb-color">RGB (rgb(255, 99, 71))</div>
+
+<div class="box rgba-color">RGBA (rgba(255, 165, 0, 0.6))</div>
+
+<div class="box hsl-color">HSL (hsl(30, 100%, 50%))</div>
+
+<div class="box hsla-color">HSLA (hsla(20, 100%, 40%, 0.8))</div>
+
+<div class="box variable-color">CSS Variable (var(--sunset-orange))</div>
+
+<!-- Inline Style -->
+<div class="box" style="background-color: gold; color: black;">
+Inline Style (gold)
+</div>
+
+</body>
+</html>
