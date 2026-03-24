@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Eligibility</title>
+</head>
+<body>
+
+<h2>Voter Information</h2>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Eligible to Vote</th>
+    </tr>
+    <tr>
+        <td id="name"></td>
+        <td id="age"></td>
+        <td id="status"></td>
+    </tr>
+</table>
+
+<script>
+    // Ask user details using prompt
+    let voterName = prompt("Enter your name:");
+    let voterAge = prompt("Enter your age:");
+
+    voterAge = parseInt(voterAge);
+
+    let result;
+
+    if (voterAge >= 18) {
+        result = "Can Vote";
+    } else {
+        result = "Cannot Vote";
+    }
+
+    // Display in table
+    document.getElementById("name").innerHTML = voterName;
+    document.getElementById("age").innerHTML = voterAge;
+    document.getElementById("status").innerHTML = result;
+</script>
+
+</body>
+</html>
