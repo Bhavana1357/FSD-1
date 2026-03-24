@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Input Methods</title>
+</head>
+<body>
+
+<h2>Different Ways to Take Input</h2>
+
+<!-- Input using text box -->
+<input type="text" id="userInput" placeholder="Enter something">
+<button onclick="readInput()">Submit</button>
+
+<script>
+
+    // 1. prompt() – Takes input using a dialog box
+    let name = prompt("Enter your name:");
+    console.log("Name entered using prompt(): " + name);
+
+    // 2. confirm() – Takes boolean input (OK / Cancel)
+    let answer = confirm("Do you like JavaScript?");
+    console.log("Confirm result: " + answer);
+
+    // 3. Input from HTML text box
+    function readInput() {
+        let value = document.getElementById("userInput").value;
+        alert("You entered: " + value);
+    }
+
+</script>
+
+</body>
+</html>
