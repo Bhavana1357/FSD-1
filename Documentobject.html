@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Example</title>
+</head>
+<body>
+
+    <h1 id="title">Hello World</h1>
+    <p id="para">This is a paragraph.</p>
+
+    <button onclick="changeContent()">Click Me</button>
+
+    <script>
+        function changeContent() {
+            // Using document property
+            console.log("Page Title: " + document.title);
+
+            // Using getElementById method
+            let heading = document.getElementById("title");
+            let paragraph = document.getElementById("para");
+
+            // Changing content using innerHTML property
+            heading.innerHTML = "Welcome to JavaScript!";
+            paragraph.innerHTML = "Content has been changed.";
+
+            // Changing style using style property
+            heading.style.color = "blue";
+            paragraph.style.fontSize = "20px";
+
+            // Creating a new element using createElement method
+            let newElement = document.createElement("p");
+            newElement.innerHTML = "This is a newly added paragraph.";
+
+            // Appending element using appendChild method
+            document.body.appendChild(newElement);
+        }
+    </script>
+
+</body>
+</html>
