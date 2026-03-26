@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object Example</title>
+</head>
+<body>
+
+<h2>RegExp Object Demo</h2>
+<p id="output"></p>
+
+<script>
+    // Creating a RegExp object
+    let pattern = /JavaScript/gi;
+
+    let str = "JavaScript is fun. javascript is powerful.";
+
+    let result = "";
+
+    // Property: source
+    result += "Pattern source: " + pattern.source + "<br>";
+
+    // Property: global
+    result += "Global flag: " + pattern.global + "<br>";
+
+    // Property: ignoreCase
+    result += "Ignore case flag: " + pattern.ignoreCase + "<br>";
+
+    // Method: test()
+    result += "Test 'JavaScript' exists: " + pattern.test(str) + "<br>";
+
+    // Method: exec()
+    let match = pattern.exec(str);
+    result += "First match using exec(): " + match + "<br>";
+
+    // Method: match()
+    let matches = str.match(pattern);
+    result += "All matches using match(): " + matches + "<br>";
+
+    // Method: search()
+    result += "Index using search(): " + str.search(pattern) + "<br>";
+
+    // Method: replace()
+    result += "Replace using regex: " + str.replace(pattern, "JS") + "<br>";
+
+    // Method: split()
+    let words = str.split(/\s/);
+    result += "Split words: " + words + "<br>";
+
+    // Display output
+    document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>
