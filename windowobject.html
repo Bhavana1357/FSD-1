@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Example</title>
+</head>
+<body>
+
+    <h2>Window Object Demo</h2>
+
+    <button onclick="showInfo()">Show Window Info</button>
+    <button onclick="openNewWindow()">Open New Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+
+    <script>
+        function showInfo() {
+            // Window properties
+            alert("Window Width: " + window.innerWidth);
+            alert("Window Height: " + window.innerHeight);
+
+            // Location property
+            alert("Current URL: " + window.location.href);
+        }
+
+        function openNewWindow() {
+            // Open a new window
+            window.open("https://www.google.com", "_blank", "width=500,height=500");
+        }
+
+        function closeWindow() {
+            // Close current window
+            window.close();
+        }
+
+        // Using setTimeout method
+        setTimeout(function() {
+            console.log("This message appears after 3 seconds");
+        }, 3000);
+    </script>
+
+</body>
+</html>
