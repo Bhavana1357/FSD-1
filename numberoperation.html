@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions & Events</title>
+</head>
+<body>
+
+<h2>JavaScript Functions & Events</h2>
+
+<label>Enter a number:</label>
+<input type="number" id="num" value="10"><br><br>
+
+<button onclick="showFactorial()">Factorial</button>
+<button onclick="showFibonacci()">Fibonacci</button>
+<button onclick="showPrimes()">Prime</button>
+<button onclick="showPalindrome()">Palindrome</button>
+
+<h3>Result:</h3>
+<p id="result"></p>
+
+<script>
+
+function showFactorial() {
+    let n = parseInt(document.getElementById("num").value);
+    let fact = 1;
+
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Factorial: " + fact;
+}
+
+function showFibonacci() {
+    let n = parseInt(document.getElementById("num").value);
+    let a = 0, b = 1;
+    let series = "";
+
+    for (let i = 0; i < n; i++) {
+        series += a + ", ";
+        let temp = a + b;
+        a = b;
+        b = temp;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Fibonacci Series up to " + n + ": " + series;
+}
+
+function showPrimes() {
+    let n = parseInt(document.getElementById("num").value);
+    let result = "";
+
+    for (let i = 2; i <= n; i++) {
+        let isPrime = true;
+
+        for (let j = 2; j <= i / 2; j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            result += i + ", ";
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "Prime numbers up to " + n + ": " + result;
+}
+
+function showPalindrome() {
+    let n = parseInt(document.getElementById("num").value);
+    let original = n;
+    let rev = 0;
+
+    while (n > 0) {
+        let digit = n % 10;
+        rev = rev * 10 + digit;
+        n = Math.floor(n / 10);
+    }
+
+    let output = (original === rev)
+        ? original + " is a Palindrome."
+        : original + " is NOT a Palindrome.";
+
+    document.getElementById("result").innerHTML =
+        "Palindrome Check: " + output;
+}
+
+</script>
+
+</body>
+</html>
