@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Example</title>
+</head>
+<body>
+
+    <h2>Array Object Demo</h2>
+    <button onclick="arrayDemo()">Run Program</button>
+
+    <p id="output"></p>
+
+    <script>
+        function arrayDemo() {
+
+            // Creating an array
+            let fruits = ["Apple", "Banana", "Mango"];
+
+            // Using length property
+            let result = "Original Array: " + fruits + "<br>";
+            result += "Length: " + fruits.length + "<br>";
+
+            // push() - add element at end
+            fruits.push("Orange");
+            result += "After push: " + fruits + "<br>";
+
+            // pop() - remove last element
+            fruits.pop();
+            result += "After pop: " + fruits + "<br>";
+
+            // shift() - remove first element
+            fruits.shift();
+            result += "After shift: " + fruits + "<br>";
+
+            // unshift() - add element at beginning
+            fruits.unshift("Grapes");
+            result += "After unshift: " + fruits + "<br>";
+
+            // join() - convert array to string
+            result += "Joined Array: " + fruits.join(" - ") + "<br>";
+
+            // reverse() - reverse array
+            fruits.reverse();
+            result += "Reversed Array: " + fruits + "<br>";
+
+            // sort() - sort elements
+            fruits.sort();
+            result += "Sorted Array: " + fruits + "<br>";
+
+            // display output
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
