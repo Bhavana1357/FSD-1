@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object Example</title>
+</head>
+<body>
+
+<h2>User Defined Object Demo</h2>
+<p id="output"></p>
+
+<script>
+    // Constructor function
+    function Student(name, age, marks) {
+        // Properties
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+
+        // Method
+        this.getDetails = function() {
+            return "Name: " + this.name + 
+                   ", Age: " + this.age + 
+                   ", Marks: " + this.marks;
+        };
+
+        // Accessor (Getter)
+        Object.defineProperty(this, "grade", {
+            get: function() {
+                if (this.marks >= 90) return "A";
+                else if (this.marks >= 75) return "B";
+                else if (this.marks >= 50) return "C";
+                else return "Fail";
+            }
+        });
+
+        // Accessor (Setter)
+        Object.defineProperty(this, "updateMarks", {
+            set: function(newMarks) {
+                this.marks = newMarks;
+            }
+        });
+    }
+
+    // Creating object using constructor
+    let student1 = new Student("Bhavana", 20, 85);
+
+    let result = "";
+
+    // Display properties
+    result += "<b>Properties:</b><br>";
+    result += "Name: " + student1.name + "<br>";
+    result += "Age: " + student1.age + "<br>";
+    result += "Marks: " + student1.marks + "<br><br>";
+
+    // Using method
+    result += "<b>Method Output:</b><br>";
+    result += student1.getDetails() + "<br><br>";
+
+    // Using accessor (getter)
+    result += "<b>Getter (Grade):</b><br>";
+    result += "Grade: " + student1.grade + "<br><br>";
+
+    // Using accessor (setter)
+    student1.updateMarks = 92;
+
+    result += "<b>After Updating Marks:</b><br>";
+    result += "Marks: " + student1.marks + "<br>";
+    result += "New Grade: " + student1.grade + "<br>";
+
+    // Display output
+    document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>
