@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example</title>
+</head>
+<body>
+
+<h2>String Object Demo</h2>
+<p id="output"></p>
+
+<script>
+    // Creating a string
+    let str = "Hello JavaScript";
+
+    // Using string properties and methods
+    let result = "";
+
+    // Property: length
+    result += "Length: " + str.length + "<br>";
+
+    // Method: toUpperCase()
+    result += "Uppercase: " + str.toUpperCase() + "<br>";
+
+    // Method: toLowerCase()
+    result += "Lowercase: " + str.toLowerCase() + "<br>";
+
+    // Method: charAt()
+    result += "Character at index 1: " + str.charAt(1) + "<br>";
+
+    // Method: indexOf()
+    result += "Index of 'Java': " + str.indexOf("Java") + "<br>";
+
+    // Method: substring()
+    result += "Substring (0 to 5): " + str.substring(0, 5) + "<br>";
+
+    // Method: replace()
+    result += "Replace 'JavaScript' with 'World': " + str.replace("JavaScript", "World") + "<br>";
+
+    // Method: split()
+    let words = str.split(" ");
+    result += "Split into words: " + words + "<br>";
+
+    // Display output
+    document.getElementById("output").innerHTML = result;
+</script>
+
+</body>
+</html>
