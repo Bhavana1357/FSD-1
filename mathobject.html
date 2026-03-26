@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Example</title>
+</head>
+<body>
+
+    <h2>Math Object Demo</h2>
+    <button onclick="mathDemo()">Run Program</button>
+
+    <p id="output"></p>
+
+    <script>
+        function mathDemo() {
+
+            let result = "";
+
+            // Math properties
+            result += "Value of PI: " + Math.PI + "<br>";
+            result += "Value of E: " + Math.E + "<br><br>";
+
+            let num = 4.7;
+
+            // Math methods
+            result += "Original Number: " + num + "<br>";
+            result += "Round: " + Math.round(num) + "<br>";
+            result += "Ceil: " + Math.ceil(num) + "<br>";
+            result += "Floor: " + Math.floor(num) + "<br><br>";
+
+            result += "Square Root of 25: " + Math.sqrt(25) + "<br>";
+            result += "Power (2^3): " + Math.pow(2, 3) + "<br>";
+            result += "Absolute (-10): " + Math.abs(-10) + "<br><br>";
+
+            result += "Random Number (0-1): " + Math.random() + "<br>";
+
+            // Random number between 1 and 100
+            let randomNum = Math.floor(Math.random() * 100) + 1;
+            result += "Random Number (1-100): " + randomNum + "<br>";
+
+            // Display output
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
